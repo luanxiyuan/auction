@@ -9,6 +9,10 @@ import { ContentComponent } from './content/content.component';
 import { MenuComponent } from './menu/menu.component';
 import { StockManageComponent } from './stock/stock-manage/stock-manage.component';
 import { StarsComponent } from './stars/stars.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { Code404Component } from './code404/code404.component';
+import { StockFormComponent } from './stock/stock-form/stock-form.component';
 
 @NgModule({
   declarations: [   
@@ -20,10 +24,14 @@ import { StarsComponent } from './stars/stars.component';
     SidebarComponent,
     StockManageComponent,
     StarsComponent,
-    MenuComponent
+    MenuComponent,
+    HomeComponent,
+    Code404Component,
+    StockFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
   ],
