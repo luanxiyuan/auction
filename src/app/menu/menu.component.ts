@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
       new Menu(2, '股票管理', '/stock', 'glyphicon glyphicon-th-list')
     ];
     //通过location对象获取当前url，用来设置当前的默认选中菜单
-    let currentUrl = this.location.path() == '/' ? '/home' : this.location.path();
+    let currentUrl = (this.location.path() == '/' || this.location.path() == '') ? '/home' : this.location.path();
     this.setDefaultMenu(currentUrl);
   }
 
