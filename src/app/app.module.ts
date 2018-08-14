@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { Code404Component } from './code404/code404.component';
 import { StockFormComponent } from './stock/stock-form/stock-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { StockFilterPipe } from './stock/stock-filter.pipe';
 
 @NgModule({
   declarations: [   
@@ -27,11 +29,14 @@ import { StockFormComponent } from './stock/stock-form/stock-form.component';
     MenuComponent,
     HomeComponent,
     Code404Component,
-    StockFormComponent
+    StockFormComponent,
+    StockFilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],
