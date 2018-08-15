@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Stock, StockService } from '../stock.service';
 
@@ -6,6 +6,7 @@ import { Stock, StockService } from '../stock.service';
   selector: 'app-stock-form',
   templateUrl: './stock-form.component.html',
   styleUrls: ['./stock-form.component.css']
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StockFormComponent implements OnInit {
 
@@ -28,6 +29,10 @@ export class StockFormComponent implements OnInit {
   
   save() {
     this.router.navigateByUrl('/stock');
+  }
+
+  setRatingValue(rating: number) {
+    this.stock.rating = rating;
   }
 
 }
